@@ -1,4 +1,6 @@
-## Oppgaver: Pytagoras' setning
+# Oppgaver
+
+## Pytagoras' setning
 
 :::::::::::::::{exercise} Oppgave 1
 ---

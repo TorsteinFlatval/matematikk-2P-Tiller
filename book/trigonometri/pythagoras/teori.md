@@ -1,4 +1,5 @@
-## Pytagoras' setning
+# Pytagoras' setning
+
 En **rettvinklet** trekant er en trekant der én av vinklene er $90 \degree$.
 Pytagoras' setning er en setning som forteller oss hvordan sidene i en rettvinklet trekant henger sammen. 
 
