@@ -1,0 +1,22 @@
+format: jb-book
+
+root: index.md
+options: 
+  numbered: True
+
+parts:
+  - caption: Trigonometri
+    numbered: 1
+    chapters:
+    - file: book/trigonometri/pythagoras/teori.md
+      sections:
+      - file: book/trigonometri/pythagoras/oppgaver.md
+        title: Oppgaver
+    - file: book/trigonometri/areal/teori.md
+      sections:
+      - file: book/trigonometri/areal/oppgaver.md
+        title: Oppgaver
+
+
+    
+
