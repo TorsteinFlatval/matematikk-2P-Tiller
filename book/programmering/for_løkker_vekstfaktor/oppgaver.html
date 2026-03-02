@@ -59,7 +59,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=241d39f0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=f903e660" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=f760f57b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=aaae9953" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=722631f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
@@ -515,6 +515,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grunnleggende-vekstfaktor">Grunnleggende vekstfaktor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vekst-og-nedgang-over-tid-med-for-lokker">Vekst og nedgang over tid med for-løkker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-lokker-finne-nar-et-mal-er-nadd">While-løkker: Finne når et mål er nådd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mer-utfordrende-oppgaver">Mer utfordrende oppgaver</a></li>
 </ul>
             </nav>
@@ -534,20 +535,19 @@ document.write(`
 <div class="admonition exercise">
 <p class="admonition-title">Oppgave 1</p>
 <p>Du har 2000 kr som spares med 5% årlig rente.</p>
-<p>Skriv et program som bruker formelen <code class="docutils literal notranslate"><span class="pre">ny_verdi</span> <span class="pre">=</span> <span class="pre">gammel_verdi</span> <span class="pre">*</span> <span class="pre">vekstfaktor^t</span></code> til å finne beløpet etter 4 år.</p>
+<p>Skriv et program som bruker formelen <code class="code docutils literal highlight highlight-python"><span class="n">ny_verdi</span> <span class="o">=</span> <span class="n">gammel_verdi</span> <span class="o">*</span> <span class="n">vekstfaktor</span> <span class="o">**</span> <span class="n">t</span></code> til å finne beløpet etter 4 år.</p>
 
-        <div id="container-code-ae09a88b"></div>
+        <div id="container-code-5d1ff823"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
-
-
-
+`gammel_verdi = 
+vekstfaktor = 
+t = 
 `;
 
                 makeInteractiveCode(
-                    "container-code-ae09a88b",
+                    "container-code-5d1ff823",
                     code,
                 );
             });
@@ -555,9 +555,8 @@ document.write(`
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <p>Utskrift:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2431.01
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2431.0125
 </pre></div>
-</div>
 </div>
 </div>
 <div class="admonition solution dropdown">
@@ -566,8 +565,9 @@ document.write(`
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.05</span>
 <span class="linenos">3</span><span class="n">t</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="linenos">4</span><span class="n">ny_verdi</span> <span class="o">=</span> <span class="n">gammel_verdi</span> <span class="o">*</span> <span class="n">vekstfaktor</span> <span class="o">**</span> <span class="n">t</span>
-<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="docutils">
@@ -576,18 +576,17 @@ document.write(`
 <p>En laptop koster 10 000 kr og mister 15% av verdien hvert år.</p>
 <p>Hvor mye er den verdt etter 3 år? Bruk formelen for vekst.</p>
 
-        <div id="container-code-05ee65b5"></div>
+        <div id="container-code-75aae865"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
-
-
-
+`verdi = 
+vekstfaktor = 
+t = 
 `;
 
                 makeInteractiveCode(
-                    "container-code-05ee65b5",
+                    "container-code-75aae865",
                     code,
                 );
             });
@@ -595,9 +594,8 @@ document.write(`
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <p>Utskrift:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6141.04
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>6141.25
 </pre></div>
-</div>
 </div>
 </div>
 <div class="admonition solution dropdown">
@@ -606,8 +604,9 @@ document.write(`
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">0.85</span>  <span class="c1"># 15% nedgang</span>
 <span class="linenos">3</span><span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="linenos">4</span><span class="n">ny_verdi</span> <span class="o">=</span> <span class="n">verdi</span> <span class="o">*</span> <span class="n">vekstfaktor</span> <span class="o">**</span> <span class="n">t</span>
-<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -619,18 +618,18 @@ document.write(`
 <p>En nettbank-konto starter med 5000 kr og vokser med 2% per år.</p>
 <p>Skriv et program som viser beløpet for hvert år i 6 år.</p>
 
-        <div id="container-code-b8cd7d7d"></div>
+        <div id="container-code-214cbfba"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
+`beløp = 
+vekstfaktor = 
 
-
-
-`;
+for år in range(1, 7):
+    # Skriv resten av løkken her`;
 
                 makeInteractiveCode(
-                    "container-code-b8cd7d7d",
+                    "container-code-214cbfba",
                     code,
                 );
             });
@@ -641,11 +640,10 @@ document.write(`
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>År 1 : 5100.0
 År 2 : 5202.0
 År 3 : 5306.04
-År 4 : 5412.16
-År 5 : 5520.41
-År 6 : 5631.02
+År 4 : 5412.1608
+År 5 : 5520.4040159999995
+År 6 : 5630.81209632
 </pre></div>
-</div>
 </div>
 </div>
 <div class="admonition solution dropdown">
@@ -659,24 +657,24 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="docutils">
+</div>
 <div class="admonition exercise">
 <p class="admonition-title">Oppgave 4</p>
 <p>En bil er verdt 200 000 kr og mister 10% av verdien hvert år.</p>
 <p>Skriv et program som viser verdien hver år i 5 år.</p>
 
-        <div id="container-code-535af551"></div>
+        <div id="container-code-f1907915"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
+`verdi = 
+vekstfaktor = 
 
-
-
-`;
+for år in range(1, 6):
+    # Skriv resten av løkken her`;
 
                 makeInteractiveCode(
-                    "container-code-535af551",
+                    "container-code-f1907915",
                     code,
                 );
             });
@@ -692,7 +690,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</div>
 <div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">verdi</span> <span class="o">=</span> <span class="mi">200000</span>
@@ -705,23 +702,27 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="while-lokker-finne-nar-et-mal-er-nadd">
+<h2>While-løkker: Finne når et mål er nådd<a class="headerlink" href="#while-lokker-finne-nar-et-mal-er-nadd" title="Link to this heading">#</a></h2>
 <div class="admonition exercise">
 <p class="admonition-title">Oppgave 5</p>
 <p>En YouTube-kanal har 100 abonnenter og vokser med 20% per måned.</p>
 <p>Skriv et program som finner hvor mange måneder det tar før kanalen har minst 10 000 abonnenter.</p>
 
-        <div id="container-code-23a44286"></div>
+        <div id="container-code-e8d81e1d"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
+`abonnenter = 
+vekstfaktor = 
+måneder = 
 
-
-
-`;
+while abonnenter < 10000:
+    # Skriv resten av løkken her`;
 
                 makeInteractiveCode(
-                    "container-code-23a44286",
+                    "container-code-e8d81e1d",
                     code,
                 );
             });
@@ -729,10 +730,9 @@ document.write(`
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <p>Utskrift:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall måneder: 19
-Antall abonnenter: 10239
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall måneder: 26
+Antall abonnenter: 11447.545997288275
 </pre></div>
-</div>
 </div>
 </div>
 <div class="admonition solution dropdown">
@@ -746,28 +746,29 @@ Antall abonnenter: 10239
 <span class="linenos"> 7</span>    <span class="n">måneder</span> <span class="o">=</span> <span class="n">måneder</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall måneder:&quot;</span><span class="p">,</span> <span class="n">måneder</span><span class="p">)</span>
-<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall abonnenter:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">abonnenter</span><span class="p">))</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall abonnenter:&quot;</span><span class="p">,</span> <span class="n">abonnenter</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="docutils">
+</div>
 <div class="admonition exercise">
 <p class="admonition-title">Oppgave 6</p>
-<p>En radioaktiv stoff har 1000 gram og halvert seg hver gang (50% nedgang per periode).</p>
-<p>Hvor mange perioder tar det før det er mindre enn 10 gram igjen?</p>
+<p>Et radioaktivt stoff er 1000 gram og halverer seg hver dag.</p>
+<p>Hvor mange dager tar det før det er mindre enn 10 gram igjen?</p>
 
-        <div id="container-code-6bc243c6"></div>
+        <div id="container-code-c0cd7d23"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
-`# Skriv programmet ditt her
+`gram = 
+vekstfaktor = 
+dager = 
 
-
-
-`;
+while gram > 10:
+    # Skriv resten av løkken her`;
 
                 makeInteractiveCode(
-                    "container-code-6bc243c6",
+                    "container-code-c0cd7d23",
                     code,
                 );
             });
@@ -775,24 +776,23 @@ Antall abonnenter: 10239
         <div class="admonition answer dropdown">
 <p class="admonition-title">Fasit</p>
 <p>Utskrift:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall perioder: 7
-Resterende gram: 7.81
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall dager: 7
+Resterende gram: 7.8125
 </pre></div>
-</div>
 </div>
 </div>
 <div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">gram</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">0.50</span>
-<span class="linenos"> 3</span><span class="n">perioder</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos"> 3</span><span class="n">dager</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos"> 4</span>
 <span class="linenos"> 5</span><span class="k">while</span> <span class="n">gram</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
 <span class="linenos"> 6</span>    <span class="n">gram</span> <span class="o">=</span> <span class="n">gram</span> <span class="o">*</span> <span class="n">vekstfaktor</span>
-<span class="linenos"> 7</span>    <span class="n">perioder</span> <span class="o">=</span> <span class="n">perioder</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos"> 7</span>    <span class="n">dager</span> <span class="o">=</span> <span class="n">dager</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall perioder:&quot;</span><span class="p">,</span> <span class="n">perioder</span><span class="p">)</span>
-<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resterende gram:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">gram</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall dager:&quot;</span><span class="p">,</span> <span class="n">dager</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resterende gram:&quot;</span><span class="p">,</span> <span class="n">gram</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -806,7 +806,7 @@ Resterende gram: 7.81
 <p>Du har 0 kr på konto og setter inn 500 kr hver måned. Pengene vokser med 1% rente hver måned.</p>
 <p>Skriv et program som finner hvor mange måneder det tar før du har minst 6000 kr. Skriv ut både antall måneder og sluttbeløpet.</p>
 
-        <div id="container-code-5d0db65a"></div>
+        <div id="container-code-bcfb7d90"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -817,12 +817,20 @@ Resterende gram: 7.81
 `;
 
                 makeInteractiveCode(
-                    "container-code-5d0db65a",
+                    "container-code-bcfb7d90",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall måneder: 12
+Sluttbeløp: 6404.66402166447
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">beløp</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.01</span>
@@ -835,18 +843,17 @@ Resterende gram: 7.81
 <span class="linenos"> 9</span>    <span class="n">måneder</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="linenos">10</span>
 <span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall måneder:&quot;</span><span class="p">,</span> <span class="n">måneder</span><span class="p">)</span>
-<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">beløp</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="n">beløp</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="docutils">
 <div class="admonition exercise">
 <p class="admonition-title">Oppgave 8</p>
-<p>En by har 50 000 innbyggere. Hver år øker befolkningen med 1.5%, men samtidig emigrerer 500 mennesker.</p>
+<p>En by har 50 000 innbyggere. Hver år mister den 1.5% av befolkningen, og samtidig emigrerer 500 mennesker til.</p>
 <p>Skriv et program som sjekker: Hvor mange år tar det før befolkningen blir mindre enn 45 000?</p>
 
-        <div id="container-code-58e85cce"></div>
+        <div id="container-code-ce07964f"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -857,15 +864,23 @@ Resterende gram: 7.81
 `;
 
                 makeInteractiveCode(
-                    "container-code-58e85cce",
+                    "container-code-ce07964f",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall år: 5
+Befolkning: 43934.70853046875
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">befolkning</span> <span class="o">=</span> <span class="mi">50000</span>
-<span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.015</span>
+<span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">0.985</span>  <span class="c1"># 1.5% nedgang</span>
 <span class="linenos"> 3</span><span class="n">emigrasjon</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="linenos"> 4</span><span class="n">år</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos"> 5</span>
@@ -875,9 +890,8 @@ Resterende gram: 7.81
 <span class="linenos"> 9</span>    <span class="n">år</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="linenos">10</span>
 <span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall år:&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">)</span>
-<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Befolkning:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">befolkning</span><span class="p">))</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Befolkning:&quot;</span><span class="p">,</span> <span class="n">befolkning</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -886,7 +900,7 @@ Resterende gram: 7.81
 <p>En bedrift produserer biler. Første år produserer de 1000 biler. Hver år øker produksjonen med 8%, men kostnaden per bil synker med 2%.</p>
 <p>Hvis utgangskostnaden per bil er 200 000 kr, hva blir den totale produksjonskostnaden hvert år i 5 år? (Bruk både vekst og nedgang!)</p>
 
-        <div id="container-code-baf2f8d3"></div>
+        <div id="container-code-14a7eca0"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -897,12 +911,23 @@ Resterende gram: 7.81
 `;
 
                 makeInteractiveCode(
-                    "container-code-baf2f8d3",
+                    "container-code-14a7eca0",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>År 1 - Biler: 1080.0 - Total kostnad: 211680000.0
+År 2 - Biler: 1166.4 - Total kostnad: 224042112.00000003
+År 3 - Biler: 1259.7120000000002 - Total kostnad: 237126171.34080005
+År 4 - Biler: 1360.4889600000004 - Total kostnad: 250974339.74710277
+År 5 - Biler: 1469.3280768000004 - Total kostnad: 265631241.18833357
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">biler</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="linenos"> 2</span><span class="n">vekst_biler</span> <span class="o">=</span> <span class="mf">1.08</span>
@@ -913,169 +938,8 @@ Resterende gram: 7.81
 <span class="linenos"> 7</span>    <span class="n">biler</span> <span class="o">=</span> <span class="n">biler</span> <span class="o">*</span> <span class="n">vekst_biler</span>
 <span class="linenos"> 8</span>    <span class="n">kostnad_per_bil</span> <span class="o">=</span> <span class="n">kostnad_per_bil</span> <span class="o">*</span> <span class="n">synking_kostnad</span>
 <span class="linenos"> 9</span>    <span class="n">total_kostnad</span> <span class="o">=</span> <span class="n">biler</span> <span class="o">*</span> <span class="n">kostnad_per_bil</span>
-<span class="linenos">10</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;År&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">,</span> <span class="s2">&quot;- Biler:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">biler</span><span class="p">),</span> <span class="s2">&quot;- Total kostnad:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total_kostnad</span><span class="p">))</span>
+<span class="linenos">10</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;År&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">,</span> <span class="s2">&quot;- Biler:&quot;</span><span class="p">,</span> <span class="n">biler</span><span class="p">,</span> <span class="s2">&quot;- Total kostnad:&quot;</span><span class="p">,</span> <span class="n">total_kostnad</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="docutils">
-<div class="admonition exercise">
-<p class="admonition-title">Oppgave 10</p>
-<p>En bakteriekultur starter med 100 bakterier. Den vokser med 25% hver time det første døgnet (24 timer).</p>
-<p>Skriv et program som:</p>
-<ul class="simple">
-<li><p>Viser antallet bakterier hver 6. time (time 0, 6, 12, 18, 24)</p></li>
-<li><p>Finner total økning i prosent fra start til slutt</p></li>
-</ul>
-
-        <div id="container-code-1254fb90"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`# Skriv programmet ditt her
-# Hint: Bruk en løkke og en teller
-
-
-
-`;
-
-                makeInteractiveCode(
-                    "container-code-1254fb90",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition solution dropdown">
-<p class="admonition-title">Løsning</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">bakterier_start</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="linenos"> 2</span><span class="n">bakterier</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="linenos"> 3</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.25</span>
-<span class="linenos"> 4</span><span class="n">teller</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">):</span>
-<span class="linenos"> 7</span>    <span class="n">bakterier</span> <span class="o">=</span> <span class="n">bakterier</span> <span class="o">*</span> <span class="n">vekstfaktor</span>
-<span class="linenos"> 8</span>    <span class="n">teller</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="linenos"> 9</span>    
-<span class="linenos">10</span>    <span class="k">if</span> <span class="n">teller</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-<span class="linenos">11</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bakterier</span><span class="p">))</span>
-<span class="linenos">12</span>        <span class="n">teller</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="c1"># Siste måling (time 24)</span>
-<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time 24:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bakterier</span><span class="p">))</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="c1"># Prosent økning</span>
-<span class="linenos">18</span><span class="n">prosent_okning</span> <span class="o">=</span> <span class="p">((</span><span class="n">bakterier</span> <span class="o">-</span> <span class="n">bakterier_start</span><span class="p">)</span> <span class="o">/</span> <span class="n">bakterier_start</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total økning: </span><span class="si">{:.1f}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prosent_okning</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition exercise">
-<p class="admonition-title">Oppgave 11</p>
-<p>To investeringer:</p>
-<ul class="simple">
-<li><p><strong>Investering A:</strong> 10 000 kr med 4% årlig rente</p></li>
-<li><p><strong>Investering B:</strong> 10 000 kr med 3% årlig rente de 5 første årene, så 5% fra år 6</p></li>
-</ul>
-<p>Skriv et program som sammenligner de to investeringene og finner når investering B blir større enn investering A.</p>
-
-        <div id="container-code-70d89c66"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`# Skriv programmet ditt her
-
-
-
-`;
-
-                makeInteractiveCode(
-                    "container-code-70d89c66",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition solution dropdown">
-<p class="admonition-title">Løsning</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">inv_a</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="linenos"> 2</span><span class="n">inv_b</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="linenos"> 3</span><span class="n">år</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">while</span> <span class="n">inv_a</span> <span class="o">&gt;=</span> <span class="n">inv_b</span><span class="p">:</span>
-<span class="linenos"> 6</span>    <span class="n">år</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="linenos"> 7</span>    <span class="n">inv_a</span> <span class="o">=</span> <span class="n">inv_a</span> <span class="o">*</span> <span class="mf">1.04</span>
-<span class="linenos"> 8</span>    
-<span class="linenos"> 9</span>    <span class="k">if</span> <span class="n">år</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
-<span class="linenos">10</span>        <span class="n">inv_b</span> <span class="o">=</span> <span class="n">inv_b</span> <span class="o">*</span> <span class="mf">1.03</span>
-<span class="linenos">11</span>    <span class="k">else</span><span class="p">:</span>
-<span class="linenos">12</span>        <span class="n">inv_b</span> <span class="o">=</span> <span class="n">inv_b</span> <span class="o">*</span> <span class="mf">1.05</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;År:&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">)</span>
-<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Investering A:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">inv_a</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Investering B:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">inv_b</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="docutils">
-<div class="admonition exercise">
-<p class="admonition-title">Oppgave 12</p>
-<p>En app har 500 brukere. Hver dag slutter 2% av brukerne og 100 nye brukere registrerer seg.</p>
-<p>Skriv et program som simulerer 30 dager og finner:</p>
-<ul class="simple">
-<li><p>Antall brukere etter 30 dager</p></li>
-<li><p>Hvilken dag brukerne var på sitt laveste/høyeste</p></li>
-<li><p>Om appen har vekst eller nedgang totalt</p></li>
-</ul>
-
-        <div id="container-code-dfe8bca3"></div>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                const code = 
-`# Skriv programmet ditt her
-# Denne må du tenke litt på selv!
-
-
-
-`;
-
-                makeInteractiveCode(
-                    "container-code-dfe8bca3",
-                    code,
-                );
-            });
-        </script>
-        <div class="admonition solution dropdown">
-<p class="admonition-title">Løsning</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">brukere</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="linenos"> 2</span><span class="n">brukere_min</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="linenos"> 3</span><span class="n">brukere_maks</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="linenos"> 4</span><span class="n">dag_min</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos"> 5</span><span class="n">dag_maks</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="k">for</span> <span class="n">dag</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">):</span>
-<span class="linenos"> 8</span>    <span class="n">brukere</span> <span class="o">=</span> <span class="n">brukere</span> <span class="o">*</span> <span class="mf">0.98</span>  <span class="c1"># Mister 2%</span>
-<span class="linenos"> 9</span>    <span class="n">brukere</span> <span class="o">+=</span> <span class="mi">100</span>  <span class="c1"># Legger til 100 nye</span>
-<span class="linenos">10</span>    
-<span class="linenos">11</span>    <span class="k">if</span> <span class="n">brukere</span> <span class="o">&lt;</span> <span class="n">brukere_min</span><span class="p">:</span>
-<span class="linenos">12</span>        <span class="n">brukere_min</span> <span class="o">=</span> <span class="n">brukere</span>
-<span class="linenos">13</span>        <span class="n">dag_min</span> <span class="o">=</span> <span class="n">dag</span>
-<span class="linenos">14</span>    
-<span class="linenos">15</span>    <span class="k">if</span> <span class="n">brukere</span> <span class="o">&gt;</span> <span class="n">brukere_maks</span><span class="p">:</span>
-<span class="linenos">16</span>        <span class="n">brukere_maks</span> <span class="o">=</span> <span class="n">brukere</span>
-<span class="linenos">17</span>        <span class="n">dag_maks</span> <span class="o">=</span> <span class="n">dag</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brukere etter 30 dager:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">brukere</span><span class="p">))</span>
-<span class="linenos">20</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laveste:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">brukere_min</span><span class="p">),</span> <span class="s2">&quot;- dag&quot;</span><span class="p">,</span> <span class="n">dag_min</span><span class="p">)</span>
-<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Høyeste:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">brukere_maks</span><span class="p">),</span> <span class="s2">&quot;- dag&quot;</span><span class="p">,</span> <span class="n">dag_maks</span><span class="p">)</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="k">if</span> <span class="n">brukere</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
-<span class="linenos">24</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appen har vekst!&quot;</span><span class="p">)</span>
-<span class="linenos">25</span><span class="k">else</span><span class="p">:</span>
-<span class="linenos">26</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appen har nedgang!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1148,6 +1012,7 @@ Resterende gram: 7.81
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grunnleggende-vekstfaktor">Grunnleggende vekstfaktor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vekst-og-nedgang-over-tid-med-for-lokker">Vekst og nedgang over tid med for-løkker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-lokker-finne-nar-et-mal-er-nadd">While-løkker: Finne når et mål er nådd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mer-utfordrende-oppgaver">Mer utfordrende oppgaver</a></li>
 </ul>
   </nav></div>

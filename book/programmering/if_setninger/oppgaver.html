@@ -59,7 +59,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=241d39f0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=f903e660" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=f760f57b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=aaae9953" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=722631f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
@@ -522,7 +522,7 @@ document.write(`
 <p>Ta quizen!</p>
 
         <!-- Container for the quiz -->
-        <div id="quiz-container-37b6296f9a2d4fe6b79a8702b0447545" class="quiz-main-container"></div>
+        <div id="quiz-container-aebc1609d90f4029b0178e1aac71aec8" class="quiz-main-container"></div>
         <!-- Include KaTeX for LaTeX rendering -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
@@ -534,7 +534,7 @@ document.write(`
                 const questionsData = [{"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 10\nif x > 5:\n    print(\"x er større enn 5\")\nelse:\n    print(\"x er ikke større enn 5\")</code></pre>", "answers": [{"content": "x er større enn 5", "isCorrect": true}, {"content": "x er ikke større enn 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 3\nif x > 5:\n    print(\"x er større enn 5\")\nelse:\n    print(\"x er ikke større enn 5\")</code></pre>", "answers": [{"content": "x er ikke større enn 5", "isCorrect": true}, {"content": "x er større enn 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">tall = 7\nif tall == 7:\n    print(\"Tallet er 7\")\nelse:\n    print(\"Tallet er ikke 7\")</code></pre>", "answers": [{"content": "Tallet er 7", "isCorrect": true}, {"content": "Tallet er ikke 7", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">alder = 16\nif alder >= 18:\n    print(\"Du er myndig\")\nelse:\n    print(\"Du er ikke myndig\")</code></pre>", "answers": [{"content": "Du er ikke myndig", "isCorrect": true}, {"content": "Du er myndig", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 5\nif x != 5:\n    print(\"x er ikke 5\")\nelse:\n    print(\"x er 5\")</code></pre>", "answers": [{"content": "x er 5", "isCorrect": true}, {"content": "x er ikke 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">tall = -3\nif tall < 0:\n    print(\"Tallet er negativt\")\nelse:\n    print(\"Tallet er ikke negativt\")</code></pre>", "answers": [{"content": "Tallet er negativt", "isCorrect": true}, {"content": "Tallet er ikke negativt", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}];
 
                 // Initialize the multiple-choice quiz
-                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-37b6296f9a2d4fe6b79a8702b0447545', questionsData);
+                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-aebc1609d90f4029b0178e1aac71aec8', questionsData);
             });
         </script>
         </div>
@@ -548,7 +548,7 @@ document.write(`
 <label class="sd-tab-label" for="sd-tab-item-0">
 a</label><div class="sd-tab-content docutils">
 
-        <div id="container-code-f9f1b542"></div>
+        <div id="container-code-7b4a16de"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -559,7 +559,7 @@ else:
     print("x er ikke større enn 10")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-f9f1b542",
+                    "container-code-7b4a16de",
                     code,
                 );
             });
@@ -569,7 +569,7 @@ else:
 <label class="sd-tab-label" for="sd-tab-item-1">
 b</label><div class="sd-tab-content docutils">
 
-        <div id="container-code-295c7c43"></div>
+        <div id="container-code-599b1787"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -580,7 +580,7 @@ else:
     print("Du er ikke Bob")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-295c7c43",
+                    "container-code-599b1787",
                     code,
                 );
             });
@@ -590,7 +590,7 @@ else:
 <label class="sd-tab-label" for="sd-tab-item-2">
 c</label><div class="sd-tab-content docutils">
 
-        <div id="container-code-deab066f"></div>
+        <div id="container-code-b661c389"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -601,7 +601,7 @@ else:
     print("Tallet er større enn 10")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-deab066f",
+                    "container-code-b661c389",
                     code,
                 );
             });
@@ -611,7 +611,7 @@ else:
 <label class="sd-tab-label" for="sd-tab-item-3">
 d</label><div class="sd-tab-content docutils">
 
-        <div id="container-code-b3bf851b"></div>
+        <div id="container-code-310f5473"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -622,7 +622,7 @@ else:
     print("Du er voksen")`;
 
                 makePredictionInteractiveCode(
-                    "container-code-b3bf851b",
+                    "container-code-310f5473",
                     code,
                 );
             });
@@ -639,7 +639,7 @@ else:
 a</label><div class="sd-tab-content docutils">
 <p>Fyll ut programmet nedenfor slik at det skriver ut “Tallet er positivt” dersom <code class="docutils literal notranslate"><span class="pre">x</span></code> er større enn 0, ellers skal det skrive ut “Tallet er ikke positivt”.</p>
 
-        <div id="container-code-a2ac1aee"></div>
+        <div id="container-code-c529a6a3"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -650,7 +650,7 @@ else:
     print("Tallet er ikke positivt")`;
 
                 makeInteractiveCode(
-                    "container-code-a2ac1aee",
+                    "container-code-c529a6a3",
                     code,
                 );
             });
@@ -678,7 +678,7 @@ else:
 b</label><div class="sd-tab-content docutils">
 <p>Fyll ut programmet nedenfor slik at det skriver ut “Du kan stemme” dersom alderen er 18 eller mer, ellers skal det skrive ut “Du kan ikke stemme”.</p>
 
-        <div id="container-code-911cfc31"></div>
+        <div id="container-code-d2ed59d1"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -689,7 +689,7 @@ else:
     print("Du kan ikke stemme")`;
 
                 makeInteractiveCode(
-                    "container-code-911cfc31",
+                    "container-code-d2ed59d1",
                     code,
                 );
             });
@@ -717,7 +717,7 @@ else:
 c</label><div class="sd-tab-content docutils">
 <p>Fyll ut programmet nedenfor slik at det sjekker om tallet er partall eller oddetall.</p>
 
-        <div id="container-code-a3a238a8"></div>
+        <div id="container-code-95f20b06"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -728,7 +728,7 @@ else:
     print("Tallet er oddetall")`;
 
                 makeInteractiveCode(
-                    "container-code-a3a238a8",
+                    "container-code-95f20b06",
                     code,
                 );
             });
@@ -756,7 +756,7 @@ else:
 d</label><div class="sd-tab-content docutils">
 <p>Fyll ut programmet nedenfor slik at det sjekker om ordet er “Python”, og skriver ut riktig melding.</p>
 
-        <div id="container-code-e9ba2822"></div>
+        <div id="container-code-be0f967e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -767,7 +767,7 @@ else:
     print("Det er ikke Python")`;
 
                 makeInteractiveCode(
-                    "container-code-e9ba2822",
+                    "container-code-be0f967e",
                     code,
                 );
             });
@@ -801,7 +801,7 @@ else:
 a</label><div class="sd-tab-content docutils">
 <p>Skriv et fullstendig program som sjekker om et tall <code class="docutils literal notranslate"><span class="pre">x</span></code> er mindre enn 100. Dersom det er det, skal det skrive ut “Tallet er mindre enn 100”, ellers “Tallet er 100 eller større”.</p>
 
-        <div id="container-code-4c7d0f58"></div>
+        <div id="container-code-bf9a255c"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -809,7 +809,7 @@ a</label><div class="sd-tab-content docutils">
 # FYLL INN: skriv hele programmet`;
 
                 makeInteractiveCode(
-                    "container-code-4c7d0f58",
+                    "container-code-bf9a255c",
                     code,
                 );
             });
@@ -837,7 +837,7 @@ a</label><div class="sd-tab-content docutils">
 b</label><div class="sd-tab-content docutils">
 <p>Skriv et program som sjekker om lengden av strengen <code class="docutils literal notranslate"><span class="pre">tekst</span></code> er større enn 5 tegn. Hvis den er lengre, skal det skrive ut “Teksten er lang”, ellers “Teksten er kort”.</p>
 
-        <div id="container-code-52b32bd8"></div>
+        <div id="container-code-6929595d"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -845,7 +845,7 @@ b</label><div class="sd-tab-content docutils">
 # FYLL INN: skriv hele programmet`;
 
                 makeInteractiveCode(
-                    "container-code-52b32bd8",
+                    "container-code-6929595d",
                     code,
                 );
             });
@@ -874,7 +874,7 @@ c</label><div class="sd-tab-content docutils">
 <p>Skriv et program som sjekker om tallet <code class="docutils literal notranslate"><span class="pre">x</span></code> ligger mellom 0 og 10 (inkludert). Hvis det gjør det, skal det skrive ut “Tallet er mellom 0 og 10”, ellers “Tallet er ikke mellom 0 og 10”.</p>
 <p><strong>Hint:</strong> Du trenger å sjekke to betingelser med <code class="docutils literal notranslate"><span class="pre">and</span></code>.</p>
 
-        <div id="container-code-7f520da6"></div>
+        <div id="container-code-96225953"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -882,7 +882,7 @@ c</label><div class="sd-tab-content docutils">
 # FYLL INN: skriv hele programmet`;
 
                 makeInteractiveCode(
-                    "container-code-7f520da6",
+                    "container-code-96225953",
                     code,
                 );
             });

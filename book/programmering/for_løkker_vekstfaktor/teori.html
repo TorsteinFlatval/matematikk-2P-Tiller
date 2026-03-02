@@ -59,7 +59,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=241d39f0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=f903e660" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=f760f57b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=aaae9953" />
     <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=722631f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
@@ -520,7 +520,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vekst-over-tid-med-for-lokker">Vekst over tid med <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finne-nar-et-mal-er-nadd-med-while-lokker">Finne når et mål er nådd med <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forkortet-skriving-med-operator">Forkortet skriving med <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samlet-oppgave">Samlet oppgave</a></li>
 </ul>
             </nav>
         </div>
@@ -540,25 +539,21 @@ document.write(`
 <li><p>Forstå hva vekstfaktor betyr (både økning og nedgang)</p></li>
 <li><p>Kunne bruke formelen for vekst med vekstfaktor</p></li>
 <li><p>Kunne bruke <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>- og <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker til å simulere vekst og nedgang</p></li>
-<li><p>Forstå når man bruker <code class="docutils literal notranslate"><span class="pre">+=</span></code> operatoren</p></li>
+<li><p>Forstå når man bruker <code class="code docutils literal highlight highlight-python"><span class="o">+=</span></code> operatoren</p></li>
 </ul>
 </div>
 <section id="hva-er-vekstfaktor">
 <h2>Hva er vekstfaktor?<a class="headerlink" href="#hva-er-vekstfaktor" title="Link to this heading">#</a></h2>
 <p>En <strong>vekstfaktor</strong> brukes for å beskrive prosentvis endring - både økning og nedgang.</p>
-<ul class="simple">
-<li><p>Hvis noe øker med 5%, multipliserer vi med vekstfaktoren <strong>1.05</strong></p></li>
-<li><p>Hvis noe minker med 10%, multipliserer vi med vekstfaktoren <strong>0.90</strong></p></li>
-</ul>
 <div class="admonition summary">
 <p class="admonition-title">Vekstfaktor</p>
 <div class="math notranslate nohighlight">
 \[\text{vekstfaktor} = 1 + \frac{\text{prosentvis endring}}{100}\]</div>
 <p><strong>Eksempler:</strong></p>
 <ul class="simple">
-<li><p>3% økning → vekstfaktor = 1.03</p></li>
-<li><p>10% nedgang → vekstfaktor = 0.90</p></li>
-<li><p>20% nedgang → vekstfaktor = 0.80</p></li>
+<li><p>3% økning → <span class="math notranslate nohighlight">\(1 + \frac{3}{100} = 1 + 0.03 = 1.03\)</span></p></li>
+<li><p>10% nedgang → <span class="math notranslate nohighlight">\(1 + \frac{-10}{100} = 1 - 0.10 = 0.90\)</span></p></li>
+<li><p>20% nedgang → <span class="math notranslate nohighlight">\(1 + \frac{-20}{100} = 1 - 0.20 = 0.80\)</span></p></li>
 </ul>
 </div>
 </section>
@@ -590,7 +585,7 @@ document.write(`
 <p class="admonition-title">Underveisoppgave 1</p>
 <p>Du har 2000 kr som vokser med 3% per år. Bruk vekstformelen til å finne hvor mye du har etter 2 år.</p>
 
-        <div id="container-code-1d42e89a"></div>
+        <div id="container-code-c739f67e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -604,12 +599,19 @@ ny_verdi = # ... fyll inn resten
 `;
 
                 makeInteractiveCode(
-                    "container-code-1d42e89a",
+                    "container-code-c739f67e",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2121.8
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">gammel_verdi</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.03</span>
@@ -627,11 +629,11 @@ ny_verdi = # ... fyll inn resten
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">0.85</span>  <span class="c1"># 15% nedgang</span>
 <span class="linenos">3</span><span class="n">t</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="linenos">4</span><span class="n">ny_verdi</span> <span class="o">=</span> <span class="n">verdi</span> <span class="o">*</span> <span class="n">vekstfaktor</span> <span class="o">**</span> <span class="n">t</span>
-<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">ny_verdi</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Utskrift:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>122462.5
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>122825.0
 </pre></div>
 </div>
 </div>
@@ -670,7 +672,7 @@ ny_verdi = # ... fyll inn resten
 <p class="admonition-title">Underveisoppgave 2</p>
 <p>En bakteriekultur starter med 100 bakterier og vokser med 2% hver time. Skriv et program som viser hvor mange bakterier det er etter hver time i 5 timer.</p>
 
-        <div id="container-code-6583344a"></div>
+        <div id="container-code-f66d4ac8"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -685,19 +687,30 @@ for time in range(...):
 `;
 
                 makeInteractiveCode(
-                    "container-code-6583344a",
+                    "container-code-f66d4ac8",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Time 1 : 102.0
+Time 2 : 104.04
+Time 3 : 106.1208
+Time 4 : 108.24321600000001
+Time 5 : 110.40807632000001
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">bakterier</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.02</span>
 <span class="linenos">3</span>
 <span class="linenos">4</span><span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
 <span class="linenos">5</span>    <span class="n">bakterier</span> <span class="o">=</span> <span class="n">bakterier</span> <span class="o">*</span> <span class="n">vekstfaktor</span>
-<span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">bakterier</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">bakterier</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -707,7 +720,7 @@ for time in range(...):
 <h2>Finne når et mål er nådd med <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker<a class="headerlink" href="#finne-nar-et-mal-er-nadd-med-while-lokker" title="Link to this heading">#</a></h2>
 <p>Noen ganger vet vi ikke på forhånd hvor lang tid noe tar. En <strong><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkke</strong> kjører helt til en betingelse er oppfylt.</p>
 <div class="admonition example">
-<p class="admonition-title">Eksempel 3b: Enkel while-løkke</p>
+<p class="admonition-title">Eksempel 4: Enkel while-løkke</p>
 <p>Et enkelt eksempel på en <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkke er å spare penger:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">penger</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos">2</span><span class="k">while</span> <span class="n">penger</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">:</span>
@@ -727,29 +740,35 @@ Målet på 500 kr er nådd!
 </div>
 </div>
 <div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 2b</p>
+<p class="admonition-title">Underveisoppgave 3</p>
 <p>Du har sparepenger på 0 kr. Hver dag legger du til 150 kr. Skriv et program som viser hvor mange dager det tar før du har minst 1000 kr.</p>
 
-        <div id="container-code-43d7b97d"></div>
+        <div id="container-code-c3a71fe4"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
 `penger = 0
 dager = 
 
-# ... skriv resten av koden din her
-
-
-
-`;
+# ... skriv resten av koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-43d7b97d",
+                    "container-code-c3a71fe4",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="docutils">
+<div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall dager: 7
+Sparepenger: 1050 kr
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">penger</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos">2</span><span class="n">dager</span> <span class="o">=</span> <span class="mi">0</span>
@@ -765,7 +784,7 @@ dager =
 </div>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Eksempel 4: Når nås målet?</p>
+<p class="admonition-title">Eksempel 5: Når nås målet?</p>
 <p>Hvor mange år tar det før 1000 kr vokser til 2000 kr med 5% årlig rente?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">beløp</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.05</span>
@@ -776,12 +795,12 @@ dager =
 <span class="linenos"> 7</span>    <span class="n">år</span> <span class="o">=</span> <span class="n">år</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall år:&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">)</span>
-<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">beløp</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="n">beløp</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Utskrift:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall år: 15
-Sluttbeløp: 2078.93
+Sluttbeløp: 2078.9282042661515
 </pre></div>
 </div>
 <p><strong>Hva skjer?</strong></p>
@@ -795,10 +814,10 @@ Sluttbeløp: 2078.93
 </ul>
 </div>
 <div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 3</p>
+<p class="admonition-title">Underveisoppgave 4</p>
 <p>Hvor mange dager tar det før 500 kr vokser til 1000 kr hvis det vokser med 5% hver dag?</p>
 
-        <div id="container-code-267aea79"></div>
+        <div id="container-code-8dcee360"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -806,19 +825,25 @@ Sluttbeløp: 2078.93
 vekstfaktor = 
 dager = 
 
-# ... skriv resten av koden din her
-
-
-
-`;
+# ... skriv resten av koden din her`;
 
                 makeInteractiveCode(
-                    "container-code-267aea79",
+                    "container-code-8dcee360",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="docutils">
+<div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Antall dager: 15
+Sluttbeløp: 1039.5631118597976
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">beløp</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="linenos"> 2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.05</span>
@@ -829,7 +854,7 @@ dager =
 <span class="linenos"> 7</span>    <span class="n">dager</span> <span class="o">=</span> <span class="n">dager</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antall dager:&quot;</span><span class="p">,</span> <span class="n">dager</span><span class="p">)</span>
-<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">beløp</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sluttbeløp:&quot;</span><span class="p">,</span> <span class="n">beløp</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -841,19 +866,14 @@ dager =
 <div class="admonition summary">
 <p class="admonition-title">Forkortede operatorer</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">+=</span> <span class="pre">verdi</span></code> er det samme som <code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">=</span> <span class="pre">variabel</span> <span class="pre">+</span> <span class="pre">verdi</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">-=</span> <span class="pre">verdi</span></code> er det samme som <code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">=</span> <span class="pre">variabel</span> <span class="pre">-</span> <span class="pre">verdi</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">*=</span> <span class="pre">verdi</span></code> er det samme som <code class="docutils literal notranslate"><span class="pre">variabel</span> <span class="pre">=</span> <span class="pre">variabel</span> <span class="pre">*</span> <span class="pre">verdi</span></code></p></li>
+<li><p><code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">+=</span> <span class="n">verdi</span></code> er det samme som <code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">=</span> <span class="n">variabel</span> <span class="o">+</span> <span class="n">verdi</span></code></p></li>
+<li><p><code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">-=</span> <span class="n">verdi</span></code> er det samme som <code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">=</span> <span class="n">variabel</span> <span class="o">-</span> <span class="n">verdi</span></code></p></li>
+<li><p><code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">*=</span> <span class="n">verdi</span></code> er det samme som <code class="code docutils literal highlight highlight-python"><span class="n">variabel</span> <span class="o">=</span> <span class="n">variabel</span> <span class="o">*</span> <span class="n">verdi</span></code></p></li>
 </ul>
 </div>
 <p><strong>Eksempel på <code class="docutils literal notranslate"><span class="pre">+=</span></code>:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">penger</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">penger</span> <span class="o">+=</span> <span class="mi">50</span>  <span class="c1"># Det samme som: penger = penger + 50</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">penger</span><span class="p">)</span>  <span class="c1"># Utskrift: 150</span>
-</pre></div>
-</div>
 <div class="admonition example">
-<p class="admonition-title">Eksempel 5: Sparing med innskudd og rente</p>
+<p class="admonition-title">Eksempel 6: Sparing med innskudd og rente</p>
 <p>Du setter inn 1000 kr hver måned, og pengene vokser med 1% per måned.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">beløp</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.01</span>
@@ -862,16 +882,16 @@ dager =
 <span class="linenos">5</span><span class="k">for</span> <span class="n">måned</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
 <span class="linenos">6</span>    <span class="n">beløp</span> <span class="o">+=</span> <span class="n">innskudd</span>  <span class="c1"># Legger til innskudd</span>
 <span class="linenos">7</span>    <span class="n">beløp</span> <span class="o">=</span> <span class="n">beløp</span> <span class="o">*</span> <span class="n">vekstfaktor</span>  <span class="c1"># Legger til rente</span>
-<span class="linenos">8</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Måned&quot;</span><span class="p">,</span> <span class="n">måned</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">beløp</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">8</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Måned&quot;</span><span class="p">,</span> <span class="n">måned</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">beløp</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Utskrift:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Måned 1 : 1010.0
-Måned 2 : 2030.1
-Måned 3 : 3060.4
-Måned 4 : 4101.01
-Måned 5 : 5152.02
-Måned 6 : 6213.54
+Måned 2 : 2030.1000000000001
+Måned 3 : 3060.405000000001
+Måned 4 : 4101.01025
+Måned 5 : 5152.010762500002
+Måned 6 : 6213.541300062502
 </pre></div>
 </div>
 <p><strong>Hva skjer?</strong></p>
@@ -884,10 +904,10 @@ Måned 6 : 6213.54
 </ul>
 </div>
 <div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 4</p>
+<p class="admonition-title">Underveisoppgave 5</p>
 <p>Du lagrer 100 kr hver dag i en sparegris. Hver dag forsvinner 2% av pengene (fordi de glir ut gjennom en liten åpning - oops!). Skriv et program som viser hvor mye du har etter hver dag i 7 dager.</p>
 
-        <div id="container-code-45ae6ec2"></div>
+        <div id="container-code-c3c77164"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -900,32 +920,42 @@ Måned 6 : 6213.54
 `;
 
                 makeInteractiveCode(
-                    "container-code-45ae6ec2",
+                    "container-code-c3c77164",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dag 1 : 98.0
+Dag 2 : 194.04
+Dag 3 : 288.15919999999994
+Dag 4 : 380.3960159999999
+Dag 5 : 470.7880956799999
+Dag 6 : 559.3723337664
+Dag 7 : 646.1848870910719
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">penger</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="k">for</span> <span class="n">dag</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
 <span class="linenos">4</span>    <span class="n">penger</span> <span class="o">+=</span> <span class="mi">100</span>  <span class="c1"># Legger til 100 kr</span>
 <span class="linenos">5</span>    <span class="n">penger</span> <span class="o">*=</span> <span class="mf">0.98</span>  <span class="c1"># Mister 2% hver dag</span>
-<span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dag&quot;</span><span class="p">,</span> <span class="n">dag</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">penger</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="linenos">6</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dag&quot;</span><span class="p">,</span> <span class="n">dag</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">penger</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="samlet-oppgave">
-<h2>Samlet oppgave<a class="headerlink" href="#samlet-oppgave" title="Link to this heading">#</a></h2>
 <p>Noen ganger må du kombinere flere konsepter. Her er et eksempel hvor vi bruker både <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke, <code class="docutils literal notranslate"><span class="pre">+=</span></code> og vekstfaktor:</p>
 <div class="admonition exercise">
-<p class="admonition-title">Underveisoppgave 5</p>
+<p class="admonition-title">Underveisoppgave 6</p>
 <p>En befolkning på 50 000 personer vokser med 2% per år, men 300 personer emigrerer hvert år. Skriv et program som viser befolkningsstørrelsen hver år i 10 år.</p>
 
-        <div id="container-code-a3ee5c09"></div>
+        <div id="container-code-cdfa29c1"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -940,12 +970,28 @@ emigrasjon = 300
 `;
 
                 makeInteractiveCode(
-                    "container-code-a3ee5c09",
+                    "container-code-cdfa29c1",
                     code,
                 );
             });
         </script>
-        <div class="admonition solution dropdown">
+        <div class="admonition answer dropdown">
+<p class="admonition-title">Fasit</p>
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>År 1 : 49700.0
+År 2 : 49394.0
+År 3 : 49081.88
+År 4 : 48762.31200000001
+År 5 : 48434.75944000001
+År 6 : 48098.65462880001
+År 7 : 47753.528001456
+År 8 : 47398.79816148512
+År 9 : 47033.97372871441
+År 10 : 46658.6731512526
+</pre></div>
+</div>
+</div>
+<div class="admonition solution dropdown">
 <p class="admonition-title">Løsning</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">befolkning</span> <span class="o">=</span> <span class="mi">50000</span>
 <span class="linenos">2</span><span class="n">vekstfaktor</span> <span class="o">=</span> <span class="mf">1.02</span>
@@ -954,14 +1000,13 @@ emigrasjon = 300
 <span class="linenos">5</span><span class="k">for</span> <span class="n">år</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
 <span class="linenos">6</span>    <span class="n">befolkning</span> <span class="o">=</span> <span class="n">befolkning</span> <span class="o">*</span> <span class="n">vekstfaktor</span>
 <span class="linenos">7</span>    <span class="n">befolkning</span> <span class="o">-=</span> <span class="n">emigrasjon</span>
-<span class="linenos">8</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;År&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">befolkning</span><span class="p">))</span>
+<span class="linenos">8</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;År&quot;</span><span class="p">,</span> <span class="n">år</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">befolkning</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p>Gå til <a class="reference internal" href="oppgaver.html"><span class="std std-doc">Oppgaver</span></a> for å øve med flere eksempler!</p>
 </section>
+<hr class="docutils" />
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -1035,7 +1080,6 @@ emigrasjon = 300
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vekst-over-tid-med-for-lokker">Vekst over tid med <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finne-nar-et-mal-er-nadd-med-while-lokker">Finne når et mål er nådd med <code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forkortet-skriving-med-operator">Forkortet skriving med <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#samlet-oppgave">Samlet oppgave</a></li>
 </ul>
   </nav></div>
 
