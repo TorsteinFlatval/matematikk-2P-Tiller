@@ -13,6 +13,7 @@ class ExerciseDirective(SphinxDirective):
     final_argument_whitespace = True
     option_spec = {
         "level": directives.unchanged,
+        "hjelpemiddel": directives.unchanged,
     }
 
     def run(self):
@@ -21,6 +22,15 @@ class ExerciseDirective(SphinxDirective):
         admonition_node = nodes.admonition()
 
         admonition_node["classes"] = ["admonition", "exercise"]
+
+        if "hjelpemiddel" in self.options:
+            value = self.options.get("hjelpemiddel")
+            normalized = "" if value is None else str(value).strip().lower()
+
+            if normalized in {"false", "0", "nei", "no", "ikke", "not-allowed"}:
+                admonition_node["classes"].append("uten-hjelpemiddel")
+            else:
+                admonition_node["classes"].append("hjelpemiddel")
 
         # if self.options.get("level"):
         #     level = self.options.get("level")

@@ -12,10 +12,10 @@ gutter: 1
 ---
 
 ::::{grid-item-card}
-:header: Rektangel
+:class-title: Rektangel
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av et rektangel med bredde $b$ og høyde $h$:
 
@@ -44,10 +44,10 @@ text: 5.55, 2, "$h$", center
 ::::
 
 ::::{grid-item-card}
-:header: Kvadrat
+:class-title: Kvadrat
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av et kvadrat med sidelengde $s$:
 
@@ -75,9 +75,7 @@ text: 4.65, 2.5, "$s$", center
 
 ::::
 
-::::
-
-::::::
+:::::
 
 :::::::::::::::{admonition} Underveisoppgave 1
 ---
@@ -122,7 +120,7 @@ text: 2.0, 0.8, "$s = 6$ cm", center, fontsize: 12
 text: 0.93, 1.4, "$1$cm$^2$", center, fontsize: 5
 ```
 
-:::::::::::::::
+::::::::::::::
 
 ::::{admonition} Løsning
 ---
@@ -153,18 +151,16 @@ $$
 Når vi ganger en lengde målt i centimeter med en annen lengde målt i centimeter, får vi et areal målt i kvadratcentimeter. Vi ganger både **tallene** ($6 \cdot 6 = 36$) og **enhetene** ($\text{cm} \cdot \text{cm} = \text{cm}^2$).
 ::::
 
----
-
 :::::{grid} 1 1 2 2
 ---
 gutter: 1
 ---
 
 ::::{grid-item-card}
-:header: Trekant
+:class-title: Trekant
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av en trekant med grunnflate $g$ og høyde $h$:
 
@@ -192,10 +188,10 @@ text: 2.5, 2.4, "$h$", center
 ::::
 
 ::::{grid-item-card}
-:header: Parallellogram
+:class-title: Parallellogram
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av et parallellogram med grunnflate $g$ og høyde $h$:
 
@@ -224,10 +220,10 @@ text: 1.5, 2, "$h$", center
 ::::
 
 ::::{grid-item-card}
-:header: Trapes
+:class-title: Trapes
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av et trapes med parallelle sider $a$ og $b$, og høyde $h$:
 
@@ -258,10 +254,10 @@ text: 5.55, 2, "$h$", center
 ::::
 
 ::::{grid-item-card}
-:header: Sirkel
+:class-title: Sirkel
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Arealet av en sirkel med radius $r$:
 
@@ -283,7 +279,7 @@ text: 3.75, 2.1, "$r$", #0072b2
 
 ::::
 
-::::::
+:::::
 
 :::{explore} Fra sirkel til rektangel
 Undersøk hvordan en sirkel kan omformes til et rektangel ved å dele sirkelens areal i flere og flere biter.

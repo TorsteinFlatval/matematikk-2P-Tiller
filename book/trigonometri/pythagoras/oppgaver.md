@@ -2,10 +2,12 @@
 
 ## Pytagoras' setning
 
-:::::::::::::::{exercise} Oppgave 1
+:::::::::::::::{exercise} Oppgave 1 🚫
 ---
 level: 1
 ---
+
+**Hjelpemiddel:** Ikke tillatt.
 
 Bestem $x$ i trekanten nedenfor.
 
@@ -27,10 +29,10 @@ $$
 Vi bruker Pytagoras' setning:
 
 $$
-a^2 = b^2 + c^2
+a^2 + b^2 = c^2
 $$
 
-Der $a$ er hypotenusen. Fra figuren kan vi se at vi har en rettvinklet trekant med kjente sidelengder.
+Der $c$ er hypotenusen. Fra figuren kan vi se at vi har en rettvinklet trekant med kjente sidelengder.
 
 **Algebraisk manipulasjon:**
 
@@ -70,10 +72,12 @@ $$
 
 ---
 
-:::::::::::::::{exercise} Oppgave 2
+:::::::::::::::{exercise} Oppgave 2 🔑
 ---
 level: 1
 ---
+
+**Hjelpemiddel:** Tillatt.
 
 Nedenfor vises en rettvinklet trekant.
 
@@ -93,21 +97,29 @@ Bestem $x$.
 
 :::{answer}
 $$
-x = 5 \sqrt{3}.
+x &\approx 8.7 \\
 $$
 :::
 
 ::::{solution}
-Metode 1:
 
 Vi bruker Pytagoras' læresetning:
+$a^2 + b^2 = c^2$.
+
+Her er katetene $5$ og $x$, og hypotenusen er $10$. Da får vi:
+
 $$
-a^2 + b^2 = c^2
+\begin{align*}
+5^2 + x^2 &= 10^2 \\
+25 + x^2 &= 100 \\
+x^2 &= 100 - 25 \\
+x^2 &= 75 \\
+x &= \sqrt{75} \\
+x &\approx 8.7 \\
+\end{align*}
 $$
 
-Metode 2:
 
-I en $30^\circ-60^\circ-90^\circ$-trekant er hypotenusen dobbelt så lang som den korteste kateten. Siden den korteste kateten er $5$, må hypotenusen være $10$.
 ::::
 
 :::::::::::::
@@ -119,7 +131,7 @@ Bruk CAS-vinduet til å bestemme $x$.
 
 :::{answer}
 $$
-x = 5 \sqrt{3}.
+x &\approx 8.7
 $$
 :::
 
@@ -133,10 +145,12 @@ $$
 
 ---
 
-:::::::::::::::{exercise} Oppgave 3
+:::::::::::::::{exercise} Oppgave 3 🔑
 ---
 level: 1
 ---
+
+**Hjelpemiddel:** Tillatt.
 
 En stige på 5 meter lener seg inntil et tre. Bunnen av stigen er plassert 1,5 meter fra trestammen på flat mark. Vi antar at treet står vinkelrett på bakken.
 
@@ -158,7 +172,7 @@ Hvor høyt opp på treet når stigen? Bestem høyden $h$.
 
 :::{answer}
 $$
-h \approx 4,77 \text{ m}.
+h \approx 4.8 \text{ m}.
 $$
 :::
 
@@ -177,7 +191,7 @@ $$
 h^2 &= 25 - 2,25 \\
 h^2 &= 22,75 \\
 h &= \sqrt{22,75} \\
-h &\approx 4,77
+h &\approx 4.8
 \end{aligned}
 $$
 
@@ -194,7 +208,7 @@ Hvor høyt opp på treet når stigen? Bruk CAS til å bestemme høyden $h$.
 
 :::{answer}
 $$
-h \approx 4,77 \text{ m}.
+h \approx 4.8 \text{ m}.
 $$
 :::
 
@@ -207,4 +221,46 @@ $$
 :::::::::::::::
 
 ---
+
+:::::::::::::::{exercise} Oppgave 4 🔑
+---
+level: 1
+---
+
+**Hjelpemiddel:** Tillatt.
+
+En trekant har sidelengdene 7, 24 og 25.
+
+Undersøk om trekanten er rettvinklet.
+
+:::{answer}
+Ja, trekanten er rettvinklet.
+:::
+
+::::{solution}
+Vi bruker Pytagoras' setning baklengs for å sjekke om trekanten er rettvinklet.
+
+Den lengste siden er $25$, så vi tester om
+
+$$
+7^2 + 24^2 = 25^2.
+$$
+
+Vi regner ut:
+
+$$
+7^2 + 24^2 = 49 + 576 = 625
+$$
+
+og
+
+$$
+25^2 = 625.
+$$
+
+Siden begge sider blir like, er trekanten rettvinklet.
+::::
+
+:::::::::::::::
+
 

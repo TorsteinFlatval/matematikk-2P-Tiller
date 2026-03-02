@@ -11,10 +11,10 @@ gutter: 1
 ---
 
 ::::{grid-item-card}
-:header: Rektangulær prisme
+:class-title: Rektangulær prisme
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Volumet av et rektangulært prisme med lengde $l$, bredde $b$ og høyde $h$:
 
@@ -52,10 +52,10 @@ text: 4.8, 1.3, "$b$", center
 ::::
 
 ::::{grid-item-card}
-:header: Kube
+:class-title: Kube
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Volumet av en kube med sidelengde $s$:
 
@@ -93,10 +93,10 @@ text: 4.8, 1.3, "$s$", center
 ::::
 
 ::::{grid-item-card}
-:header: Sylinder
+:class-title: Sylinder
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Volumet av en sylinder med radius $r$ og høyde $h$:
 
@@ -124,10 +124,10 @@ text: 3.6, 1.1, "$r$", center
 ::::
 
 ::::{grid-item-card}
-:header: Pyramide
+:class-title: Pyramide
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Volumet av en pyramide med grunnflate $G$ og høyde $h$:
 
@@ -159,10 +159,10 @@ text: 2.5, 0.4, "$G$", center
 ::::
 
 ::::{grid-item-card}
-:header: Kule
+:class-title: Kule
 :class-header: sd-card-header
 :class-body: sd-card-body
-:class: summary-card
+:class-card: summary-card
 
 Volumet av en kule med radius $r$:
 

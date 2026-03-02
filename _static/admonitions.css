@@ -1403,10 +1403,38 @@ div.exercise > .admonition-title::after {
   height: 20px;
 }
 
+div.exercise.hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/key.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+div.exercise.uten-hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/stop.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
 [data-mode=light] div.exercise > .admonition-title::after {
   content: url("./icons/solid/light_mode/pencil_square.svg");
   width: 20px;
   height: 20px;
+}
+
+[data-mode=light] div.exercise.hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/light_mode/key.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+[data-mode=light] div.exercise.uten-hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/light_mode/stop.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
   
 @media (prefers-color-scheme: light) {
@@ -1414,6 +1442,20 @@ div.exercise > .admonition-title::after {
     content: url("./icons/solid/light_mode/pencil_square.svg");
     width: 20px;
     height: 20px;
+  }
+
+  div.exercise.hjelpemiddel > .admonition-title::before {
+    content: url("./icons/solid/light_mode/key.svg");
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  div.exercise.uten-hjelpemiddel > .admonition-title::before {
+    content: url("./icons/solid/light_mode/stop.svg");
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }
 }
   
@@ -1423,11 +1465,39 @@ div.exercise > .admonition-title::after {
   height: 20px;
 }
 
+[data-mode=dark] div.exercise.hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/dark_mode/key.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+[data-mode=dark] div.exercise.uten-hjelpemiddel > .admonition-title::before {
+  content: url("./icons/solid/dark_mode/stop.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
 @media (prefers-color-scheme: dark) {
   div.exercise > .admonition-title::after {
     content: url("./icons/solid/dark_mode/pencil_square.svg");
     width: 20px;
     height: 20px;
+  }
+
+  div.exercise.hjelpemiddel > .admonition-title::before {
+    content: url("./icons/solid/dark_mode/key.svg");
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  div.exercise.uten-hjelpemiddel > .admonition-title::before {
+    content: url("./icons/solid/dark_mode/stop.svg");
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }
 }
 

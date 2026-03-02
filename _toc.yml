@@ -5,8 +5,23 @@ options:
   numbered: True
 
 parts:
-  - caption: Trigonometri
+  - caption: Programmering
     numbered: 1
+    chapters:
+    - file: book/programmering/for_løkker/teori.md
+      sections:
+      - file: book/programmering/for_løkker/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/if_setninger/teori.md
+      sections:
+      - file: book/programmering/if_setninger/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/while_løkker/teori.md
+      sections:
+      - file: book/programmering/while_løkker/oppgaver.md
+        title: Oppgaver
+  - caption: Trigonometri
+    numbered: 2
     chapters:
     - file: book/trigonometri/pythagoras/teori.md
       sections:
