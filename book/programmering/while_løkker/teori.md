@@ -16,8 +16,6 @@ Tidligere lærte vi om `for`{l=python}-løkker. En `while`{l=python}-løkke fung
 
 En `while`{l=python}-løkke lar oss gjenta en kodeblokk så lenge en bestemt betingelse er sann. Dette er nyttig når vi ikke vet på forhånd hvor mange ganger koden skal gjentas, eller når vi ønsker å stoppe løkken basert på en spesifikk betingelse.
 
-### Grunnleggende `while`{l=python}-løkke
-
 :::::::::::::::{summary} `while`{l=python}-løkker
 En `while`{l=python}-løkke som skal gjenta en kodeblokk så lenge en betingelse er sann kan skrives slik:
 

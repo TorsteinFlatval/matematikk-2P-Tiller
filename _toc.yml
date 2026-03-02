@@ -2,12 +2,15 @@ format: jb-book
 
 root: index.md
 options: 
-  numbered: True
+  numbered: 1
+  maxdepth: 2
 
 parts:
   - caption: Programmering
     numbered: 1
     chapters:
+    - file: book/programmering/variabler_tall_matematikk/teori.md
+    - file: book/programmering/print_funksjonen/teori.md
     - file: book/programmering/for_løkker/teori.md
       sections:
       - file: book/programmering/for_løkker/oppgaver.md
@@ -20,8 +23,12 @@ parts:
       sections:
       - file: book/programmering/while_løkker/oppgaver.md
         title: Oppgaver
+    - file: book/programmering/for_løkker_vekstfaktor/teori.md
+      sections:
+      - file: book/programmering/for_løkker_vekstfaktor/oppgaver.md
+        title: Oppgaver
   - caption: Trigonometri
-    numbered: 2
+    numbered: 1
     chapters:
     - file: book/trigonometri/pythagoras/teori.md
       sections:

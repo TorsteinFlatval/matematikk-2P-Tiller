@@ -9,7 +9,7 @@ class: tip
 * Kunne kombinere flere betingelser i en `if`{l=python}-setning.
 :::::
 
-I programmering er det ofte nyttig å gjøre ulike ting avhengig av om noe er sant eller usant. For eksempel kanskje vi ønsker at et program skal skrive ut noe dersom et tall er større enn et annet tall, eller dersom en liste er tom. Dette er hvor `if`{l=python}-setninger er veldig nyttige. En `if`{l=python}-setning lar oss skrive kode som bare kjører dersom en bestemt betingelse er oppfylt.
+I programmering er det ofte nyttig å gjøre ulike ting avhengig av om noe er sant eller usant. For eksempel kanskje vi ønsker at et program skal skrive ut noe dersom et tall er større enn et annet tall. Dette er hvor `if`{l=python}-setninger er veldig nyttige. En `if`{l=python}-setning lar oss skrive kode som bare kjører dersom en bestemt betingelse er oppfylt.
 
 ## Sammenligningsoperatorer
 
@@ -20,10 +20,10 @@ Nedenfor ser du de viktigste sammenligningsoperatorene:
 
 | Operator | Betydning | Eksempel | Resultat |
 |----------|-----------|----------|---------|
-| `==`{l=python} | Er lik | `5 == 5` | `True`{l=python} |
+| `==`{l=python} | Er lik | `5 == 4` | `False`{l=python} |
 | `!=`{l=python} | Er ikke lik | `5 != 3` | `True`{l=python} |
-| `<`{l=python} | Mindre enn | `3 < 5` | `True`{l=python} |
-| `>`{l=python} | Større enn | `5 > 3` | `True`{l=python} |
+| `<`{l=python} | Mindre enn | `5 < 3` | `True`{l=python} |
+| `>`{l=python} | Større enn | `5 > 3` | `False`{l=python} |
 | `<=`{l=python} | Mindre enn eller lik | `5 <= 5` | `True`{l=python} |
 | `>=`{l=python} | Større enn eller lik | `5 >= 3` | `True`{l=python} |
 
@@ -43,6 +43,26 @@ if <betingelse>:
 :::
 
 Legg merke til at koden som skal kjøres dersom betingelsen er sann må være **innrykket** (indentert).
+:::::::::::::::
+
+:::::::::::::::{example} Eksempel 1: En `if`{l=python}-setning
+La oss se på et lite eksempel:
+
+:::{code-block} python
+---
+linenos:
+---
+x = 10
+if x > 5:
+    print("x er større enn 5")
+:::
+
+Dette programmet skriver ut:
+```text
+x er større enn 5
+```
+
+Siden betingelsen `x > 5`{l=python} er sann, kjøres koden inne i `if`{l=python}-blokken.
 :::::::::::::::
 
 :::::::::::::::{explore} Utforsk 1
@@ -110,7 +130,30 @@ else:
     # Kode som kjører dersom betingelsen er False
 :::
 
-::::::::::::::
+:::::::::::::::
+
+:::::::::::::::{example} Eksempel 2: En enkel `if`{l=python}-`else`{l=python}-setning
+La oss se på et lite eksempel:
+
+:::{code-block} python
+---
+linenos:
+---
+alder = 16
+if alder >= 18:
+    print("Du er myndig")
+else:
+    print("Du er ikke myndig")
+:::
+
+Dette programmet skriver ut:
+```text
+Du er ikke myndig
+```
+
+Siden `16 >= 18`{l=python} er usann, kjøres koden i `else`{l=python}-blokken.
+:::::::::::::::
+
 :::::::::::::::{explore} Utforsk 2
 La oss utforske `if`{l=python}-`else`{l=python}-setninger.
 
@@ -156,10 +199,10 @@ Les programmet og prøv å forutsi hva som blir skrevet ut.
 predict:
 ---
 tall = 7
-if tall % 2 == 0:
-    print("Tallet er partall")
+if tall > 10:
+    print("Tallet er større enn 10")
 else:
-    print("Tallet er oddetall")
+    print("Tallet er ikke større enn 10")
 :::
 :::::::::::::
 
@@ -183,6 +226,14 @@ x = -5
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Tallet er negativt
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -206,6 +257,14 @@ x = 10
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Tallet er ikke-negativt
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -229,6 +288,14 @@ navn = "Alice"
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+Du er ikke Bob
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:

@@ -13,7 +13,7 @@ class: tip
 Senere skal vi lære om en annen type løkke som kalles for en `while`{l=python}-løkke.
 :::
 
-En løkke er et verktøy i programmering som lar oss gjenta én eller flere linjer med kode flere ganger – vi kaller dette for en **kodeblokk**. Dette er nyttig når vi ønsker å lage tallfølger. Vi skal her fokusere på en type løkke som kalles `for`{l=python}-løkke. En `for`{l=python}-løkke lar oss gjenta en kodeblokk for hvert element i en liste eller en tallmengde.  
+En løkke er et verktøy i programmering som lar oss gjenta én eller flere linjer med kode flere ganger – vi kaller dette for en **kodeblokk**. Dette er nyttig når vi ønsker å gjøre noe en bestemt antall ganger. Vi skal her fokusere på en type løkke som kalles `for`{l=python}-løkke. En `for`{l=python}-løkke lar oss gjenta en kodeblokk for hvert element i en liste eller en tallmengde.  
 
 ### `for`{l=python}-løkker med avstand $1$
 
@@ -31,21 +31,21 @@ for n in range(start, slutt):
 Det siste tallet som skrives ut er `slutt - 1`{l=python}.
 :::::::::::::::
 
-Nedenfor i Utforsk 1 kan du utforske nærmere hvordan en slik `for`{l=python}-løkke fungerer.
+Vi starter med et eksempel
 
 :::{margin} `print`{l=python}-funksjonen
-I Utforsk 1 vil du se at koden som gjentas i `for`{l=python}-løkka er `print(n)`{l=python}. Denne kodelinjen skriver ut verdien av `n`{l=python} for hver runde i løkka.
+Eksempel 1 ser man at koden som gjentas i `for`{l=python}-løkka er `print(n)`{l=python}. Denne kodelinjen skriver ut verdien av `n`{l=python} for hver runde i løkka.
 :::
 
-:::::::::::::::{example} Eksempel 1: En enkel `for`{l=python}-løkke
+:::::::::::::::{example} Eksempel 1: En `for`{l=python}-løkke
 La oss se på et lite eksempel:
 
 :::{code-block} python
 ---
 linenos:
 ---
-for i in range(1, 4):
-    print(i)
+for n in range(1, 4):
+    print(n)
 :::
 
 Dette programmet skriver ut:
@@ -55,7 +55,7 @@ Dette programmet skriver ut:
 3
 ```
 
-Løkken starter med `i = 1`{l=python} og gjentar koden til `i`{l=python} når verdien `4`{l=python}. Det siste tallet som skrives ut er derfor `3`{l=python}.
+Løkken starter med `n = 1`{l=python} og gjentar koden til `n`{l=python} når verdien `4`{l=python}. Det siste tallet som skrives ut er derfor `3`{l=python}.
 :::::::::::::::
 
 :::::::::::::::{explore} Utforsk 1
@@ -160,7 +160,7 @@ Q: Hvilke tall skrives ut av programmet nedenfor? <pre><code class="python">for 
 
 Vi kan også bruke `for`{l=python}-løkker til å lage tallfølger der ikke alle tall bare er det forrige tallet pluss $1$. For eksempel kan vi lage `for`{l=python}-løkker som skriver ut partall, eller oddetall, eller tallfølger der det er fast avstand mellom hvert tall. 
 
-:::::::::::::::{summary} `for`{l=python}-løkker 2
+:::::::::::::::{summary} `for`{l=python}-løkker med avstand
 En `for`{l=python}-løkke som skriver ut tall fra og med `start`{l=python} og til `slutt`{l=python} med en fast `avstand`{l=python} mellom hvert tall kan skrives slik:
 
 :::{code-block} python
@@ -173,6 +173,29 @@ for n in range(start, stopp, avstand):
 
 Det siste tallet som skrives ut må være mindre enn `stopp`{l=python}. 
 
+:::::::::::::::
+
+:::::::::::::::{example} Eksempel 2: En `for`{l=python}-løkke med `avstand`{l=python}
+La oss se på et lite eksempel:
+
+:::{code-block} python
+---
+linenos:
+---
+for n in range(2, 11, 2):
+    print(n)
+:::
+
+Dette programmet skriver ut:
+```text
+2
+4
+6
+8
+10
+```
+
+Løkken starter med `n = 2`{l=python} og øker med `2`{l=python} for hver runde. Det siste tallet som skrives ut er `10`{l=python}, siden neste tall (`12`) ville vært større enn stoppverdien.
 :::::::::::::::
 
 
@@ -289,6 +312,23 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 :::
 
 :::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -311,6 +351,23 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 
 
 :::::{answer}
+Utskrift:
+
+```text
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -333,6 +390,18 @@ for n in range(????): # FYLL INN: bytt ut ???? med riktig tall
 
 
 :::::{answer}
+Utskrift:
+
+```text
+10
+20
+30
+40
+50
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 ---
 linenos:
