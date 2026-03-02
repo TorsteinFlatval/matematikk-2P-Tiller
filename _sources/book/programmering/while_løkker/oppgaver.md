@@ -43,7 +43,7 @@ Q: Hvilke tall skrives ut av programmet nedenfor? <pre><code class="python">n = 
 - 1, 10, 3
 
 :::
-::::::::::::::
+:::::::::::::::
 
 
 :::::::::::::::{exercise} Oppgave 2
@@ -133,6 +133,21 @@ while n <= ????: # FYLL INN
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -165,6 +180,17 @@ while n <= ????: # FYLL INN
 
 
 ::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -198,6 +224,17 @@ while n <= ????: # FYLL INN
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+5
+9
+13
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -230,6 +267,18 @@ while n >= ????: # FYLL INN
 
 
 ::::{answer}
+Utskrift:
+
+```text
+20
+16
+12
+8
+4
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -273,6 +322,16 @@ $$
 
 
 :::::{answer}
+Utskrift:
+
+```text
+10
+6
+2
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = 10
 while n >= 2:
@@ -301,6 +360,24 @@ $$
 
 
 :::::{answer}
+Utskrift:
+
+```text
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = 100
 while n >= 0:
@@ -329,6 +406,19 @@ $$
 
 
 :::::{answer}
+Utskrift:
+
+```text
+5
+3
+1
+-1
+-3
+-5
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = 5
 while n >= -5:
@@ -357,6 +447,18 @@ $$
 
 
 :::::{answer}
+Utskrift:
+
+```text
+-2
+-5
+-8
+-11
+-14
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = -2
 while n >= -14:
@@ -397,6 +499,23 @@ Lag et program som bruker en `while`{l=python}-løkke til å skrive ut alle part
 
 
 ::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -425,6 +544,24 @@ Lag et program som bruker en `while`{l=python}-løkke til å skrive ut alle odde
 
 
 ::::{answer}
+Utskrift:
+
+```text
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+```
+::::
+
+::::{solution}
 :::{code-block} python
 ---
 linenos:
@@ -454,6 +591,28 @@ Lag et program som bruker en `while`{l=python}-løkke til å skrive ut de 15 fø
 
 
 :::::{answer}
+Utskrift:
+
+```text
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = 1
 count = 0
@@ -482,6 +641,28 @@ Lag et program som bruker en `while`{l=python}-løkke til å skrive ut de 15 fø
 
 
 :::::{answer}
+Utskrift:
+
+```text
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+```
+:::::
+
+:::::{solution}
 :::{code-block} python
 n = 1
 count = 0
